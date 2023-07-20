@@ -1,16 +1,16 @@
-var tripInfoButton = document.querySelector(".trip-info");
-var dailyBudget = document.querySelector(".daily-budget");
+let tripInfoButton = document.querySelector(".trip-info");
+let dailyBudget = document.querySelector(".daily-budget");
 
-var tripInfo = function () {
-  var totalBudget = Number(prompt("What is your total budget for this trip? "));
-  var accommodation = Number(prompt("What are your accommodation costs? "));
-  var numDays = Number(prompt("How many days does your trip last? "));
+let tripInfo = function () {
+  let totalBudget = Number(prompt("What is your total budget for this trip? "));
+  let accommodation = Number(prompt("What are your accommodation costs? "));
+  let numDays = Number(prompt("How many days does your trip last? "));
 
   calculateDailyBudget(totalBudget, accommodation, numDays);
 };
 
-var calculateDailyBudget = function (totalBudget, accommodation, numDays) {
-  var daily = ((totalBudget - accommodation) / numDays).toFixed(2);
+let calculateDailyBudget = function (totalBudget, accommodation, numDays) {
+  let daily = ((totalBudget - accommodation) / numDays).toFixed(2);
 
   dailyBudget.innerText = `You can spend $${daily} a day on food and fun!`;
 };
